@@ -45,6 +45,25 @@ Para rodar este laboratório, você precisará de:
 
 ---
 
+
+## 🔄 Fluxo de Funcionamento
+
+Para entender como a mágica acontece por baixo do capô, aqui está o ciclo de processamento de cada prática:
+
+1. **Captura de Áudio** (`JavaScript`)
+   - O áudio é gravado diretamente do seu microfone através da API do navegador e enviado para o ambiente Python.
+2. **Transcrição** (`Whisper by OpenAI`)
+   - O modelo de IA processa o áudio e o transforma em texto, identificando exatamente o que foi dito.
+3. **Análise Pedagógica** (`Gemini AI`)
+   - O texto transcrito é enviado ao Gemini, que compara com a expressão correta e gera dicas de melhoria fonética.
+4. **Síntese de Voz** (`gTTS`)
+   - O sistema gera um áudio com pronúncia nativa para que você possa comparar sua fala com o padrão ideal.
+
+**Diagrama de Processo:**
+`Usuário` 🎙️ ➔ `JS Browser` ➔ `Whisper` ➔ `Gemini AI` ➔ `gTTS` ➔ 🎧 `Feedback`
+
+---
+
 ## 🤝 Créditos e Referências
 
 - **Autor:** [Felipe Oliveira](https://github.com/mecfoliveira86)
